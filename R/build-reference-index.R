@@ -48,7 +48,7 @@ data_reference_index_rows <- function(section, pkg) {
     contents <- tibble::tibble(
       path = topics$file_out,
       aliases = purrr::map2(
-        topics$funs,
+        topics$alias,
         topics$name,
         ~ if (length(.x) > 0) .x else .y
       ),
